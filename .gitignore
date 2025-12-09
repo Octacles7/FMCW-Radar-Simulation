@@ -1,0 +1,11 @@
+# Windows cell tags
+*.asv
+*.tmp
+
+# MATLAB generated files
+*.autosave
+*.slxc
+slprj/
+
+# Octave files (if compatible)
+*.m~
