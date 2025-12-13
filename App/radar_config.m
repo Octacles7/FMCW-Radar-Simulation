@@ -18,7 +18,7 @@ t_max = 2 * R_max / c; % Maximum round trip time
 T_chirp = 5.5 * t_max; % Chirp duration should be 5-6 times longer than max trip time
 
 % Chirp slope calculation
-S = B / T_chirp; % The rate at which frequency changes with respect to time
+S = BW / T_chirp; % The rate at which frequency changes with respect to time
 
 % Carrier frequency
 fc = 7.7e10; % Automotive standard carrier frequency
