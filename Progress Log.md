@@ -18,3 +18,8 @@
 - Completion of Task 1.1 implementation
 - Completion of Task 1.1 verification
 - Official Task 1.1 completion
+
+### Dec 14
+- Completion of Task 1.2 implementation
+- Completion of Task 1.2 verification
+- Official Task 1.2 completion
