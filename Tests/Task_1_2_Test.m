@@ -32,5 +32,12 @@ classdef Task_1_2_Test < matlab.unittest.TestCase
             testCase.assertEqual(mean(slopeVector), S, 'RelTol', 1e-6); % Checking that the slope is consistent
             testCase.assertLessThan(std(slopeVector) / mean(slopeVector), 1e-9); % Checking that the slope does not vary
         end
+
+        % Visual verification of generated waveform
+        function testSignalManual(testCase)
+            waveform_generation;
+            % Should see blue with a clear diagonal yellow line going up
+            spectrogram(Tx, 128, 120, 128, fs, 'yaxis');
+        end
     end
 end
