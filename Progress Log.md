@@ -29,3 +29,6 @@
 - Completion of Task 2.1 implementation
 - Completion of Task 2.1 verification
 - Official Task 2.1 completion
+- Completion of Task 2.2 implementation
+- Completion of Task 2.2 verification
+- Official Task 2.2 completion
