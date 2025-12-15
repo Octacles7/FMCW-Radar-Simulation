@@ -23,3 +23,9 @@
 - Completion of Task 1.2 implementation
 - Completion of Task 1.2 verification
 - Official Task 1.2 completion
+
+## Phase 2
+### Dec 15
+- Completion of Task 2.1 implementation
+- Completion of Task 2.1 verification
+- Official Task 2.1 completion
