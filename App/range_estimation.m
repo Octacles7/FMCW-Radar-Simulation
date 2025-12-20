@@ -12,12 +12,6 @@ y = fft(Mx, len);
 y_normalised = y / len;
 frequency = (0:len - 1) * fs / len;
 
-% plot(frequency, abs(y_normalised));
-% grid on;
-% title("Frequency Analysis");
-% xlabel("Frequency (Hz)");
-% ylabel("Magnitude");
-
 %% Step 2 Peak Calculation
 [y_max, max_index] = max(abs(y_normalised));
 beat_frequency = frequency(max_index);
