@@ -38,6 +38,7 @@
 - Completion of Task 2.3 verification
 - Official Task 2.3 completion
 
+## Phase 3
 ### Dec 21
 - Completion of Task 3.1 implementation
 - Completion of Task 3.2 implementation
