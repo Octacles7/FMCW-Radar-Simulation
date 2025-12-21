@@ -7,10 +7,9 @@
 signal_mixer;
 
 %% Step 1 Fast Fourier Transform
-len = 2^12;
-y = fft(Mx, len);
-y_normalised = y / len;
-frequency = (0:len - 1) * fs / len;
+y = fft(Mx, FFT_length);
+y_normalised = y / FFT_length;
+frequency = (0:FFT_length - 1) * fs / FFT_length;
 
 %% Step 2 Peak Calculation
 [y_max, max_index] = max(abs(y_normalised));

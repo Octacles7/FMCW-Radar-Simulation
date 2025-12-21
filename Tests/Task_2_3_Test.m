@@ -56,5 +56,22 @@ classdef Task_2_3_Test < matlab.unittest.TestCase
              % The high freq noise should be tiny (< 1% of peak)
              testCase.verifyLessThan(high_freq_noise, 0.01 * peak_val);
         end
+
+        function testSignalManual(testCase)
+            range_estimation;
+            figure;
+            subplot 211;
+            plot(frequency, abs(y_normalised));
+            grid on;
+            title("Magnitude plot of FFT");
+            ylabel("Magnitude");
+
+            subplot 212;
+            plot(frequency, angle(y_normalised));
+            grid on;
+            title("Phase plot of FFT");
+            xlabel("Frequency (Hz)");
+            ylabel("Phase (rad)");
+        end
     end
 end

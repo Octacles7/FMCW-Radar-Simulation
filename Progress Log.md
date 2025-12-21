@@ -37,3 +37,10 @@
 - Completion of Task 2.3 implementation
 - Completion of Task 2.3 verification
 - Official Task 2.3 completion
+
+### Dec 21
+- Completion of Task 3.1 implementation
+- Completion of Task 3.2 implementation
+- Completion of Task 3.2 verification
+- Official Task 3.1 completion
+- Official Task 3.2 completion

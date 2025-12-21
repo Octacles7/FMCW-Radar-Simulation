@@ -22,3 +22,6 @@ S = BW / T_chirp; % The rate at which frequency changes with respect to time
 
 % Carrier frequency
 fc = 7.7e10; % Automotive standard carrier frequency
+
+%% Step 3 MATLAB Variables
+FFT_length = 2^12;

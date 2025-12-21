@@ -1,5 +1,5 @@
 % =========================================================================
-% FMCW Radar Configuration Script
+% FMCW Waveform Generation Script
 % Phase 1, Task 1.2: Waveform Generation
 % =========================================================================
 

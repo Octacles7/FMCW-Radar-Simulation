@@ -1,5 +1,5 @@
 % =========================================================================
-% FMCW Radar Configuration Script
+% FMCW Target Simulation Script
 % Phase 2, Task 2.1: Target Simulation
 % =========================================================================
 
@@ -7,7 +7,10 @@
 waveform_generation;
 
 %% Step 1 Target Parameters
-target_range = 50;
+% Default parameter settings allow for manual override
+if ~exist('target_range', 'var')
+    target_range = 50;
+end
 target_velocity = 10; % Positive is defined moving away from the radar
 
 %% Step 2 Time Delay
