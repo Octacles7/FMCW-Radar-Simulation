@@ -45,3 +45,8 @@
 - Completion of Task 3.2 verification
 - Official Task 3.1 completion
 - Official Task 3.2 completion
+
+### Jan 4
+- Completion of Task 3.3 implementation
+- Completion of Task 3.3 verification
+- Offical Task 3.3 completion
