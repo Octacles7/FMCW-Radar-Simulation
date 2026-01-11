@@ -7,12 +7,12 @@
 coherent_integration;
 
 %% Step 1 2D FFT
-y1 = fft(Mx_matrix, [], 2); % FFT of each Mx signal along the rows
+y1 = fft(Mx_matrix, FFT_length, 2); % FFT of each Mx signal along the rows
 y2 = fft(y1, [], 1); % FFT across the loops along the columns
 y3 = fftshift(y2, 1); % Centering to put 0 m/s in the middle
 
 % Data matrix
-magnitude_matrix = 10 * log10(abs(y3));
+RDM_matrix = 10 * log10(abs(y3));
 
 %% Step 2 Axis Creation
 max_velocity = c / (4 * fc * T_chirp);

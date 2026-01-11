@@ -25,9 +25,8 @@ classdef Task_2_3_Test < matlab.unittest.TestCase
             % This ensures the target is clearly visible above the noise floor
             signal_mixer;
             
-            N = 2^12;
-            spectrum = abs(fft(Mx, N));
-            half_spectrum = spectrum(1:N/2+1);
+            spectrum = abs(fft(Mx, FFT_length));
+            half_spectrum = spectrum(1:FFT_length/2+1);
             
             [peak_val, peak_idx] = max(half_spectrum);
             
@@ -45,8 +44,7 @@ classdef Task_2_3_Test < matlab.unittest.TestCase
              % The spectrum should be mostly empty at the very high end (near Fs/2)
              signal_mixer;
              
-             N = 2048;
-             spectrum = abs(fft(Mx, N));
+             spectrum = abs(fft(Mx, FFT_length));
              
              % Check the last 10% of the spectrum (highest frequencies)
              % For a target at 50m (Low Freq), this area should be silence/noise.

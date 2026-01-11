@@ -1,9 +1,9 @@
 % =========================================================================
-% Task 3.3 Tests
-% Phase 3, Task 3.3: CFAR Detection
+% Task 4.1 Tests
+% Phase 4, Task 4.1: Noise Injection
 % =========================================================================
 
-classdef Task_3_3_Test < matlab.unittest.TestCase
+classdef Task_4_1_Test < matlab.unittest.TestCase
     % Runs once before the file starts to allocate file path
     methods (TestClassSetup)
         function addProjectFolderToPath(testCase)
@@ -11,9 +11,37 @@ classdef Task_3_3_Test < matlab.unittest.TestCase
             testCase.applyFixture(PathFixture('../App'));
         end
     end
+
+    properties
+        % Declares noise level
+        % Manually adjust to test system limits
+        target_SNR_dB = -20;
+    end
     
     methods (Test)
-        function testDetectionMap(testCase)
+        function testSurfPlotNoise(testCase)
+            % Loads noise
+            target_SNR_dB = testCase.target_SNR_dB;
+            % Should expect a peak at the target range and velocity
+            two_dimensional_fft;
+            figure('Name', 'Range-Velocity Map');
+
+            surf(range_axis(1:FFT_length / 2), velocity_axis, RDM_matrix(:, 1:FFT_length / 2));
+            
+            shading interp;
+            axis tight;
+            grid on;
+            view([0 90]);
+            title('Range-Velocity Map');
+            xlabel('Range (m)');
+            ylabel('Velocity (m/s)');
+            zlabel('Amplitude (dB)');
+            colorbar;
+        end
+
+        function testDetectionMapNoise(testCase)
+            % Loads noise
+            target_SNR_dB = testCase.target_SNR_dB;
             cfar_detection;
             
             % Purpose: Visualize the binary detection map and extract coordinates.
@@ -47,9 +75,9 @@ classdef Task_3_3_Test < matlab.unittest.TestCase
                 detected_velocity = velocity_axis(vel_idx_center);
                 detected_range    = range_axis_cfar(rng_idx_center);
                 
-                fprintf('\n------------------------------\n');
-                fprintf('✅ CFAR Detection Successful!\n');
-                fprintf('------------------------------\n');
+                fprintf('\n---------------------------------------------\n');
+                fprintf('✅ CFAR Detection Successful! (%d dB Noise)\n', target_SNR_dB);
+                fprintf('---------------------------------------------\n');
                 fprintf('Detected Coordinates:\n');
                 fprintf(' -> Velocity: %.2f m/s\n', detected_velocity);
                 fprintf(' -> Range:    %.2f m\n', detected_range);

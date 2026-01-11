@@ -11,7 +11,9 @@ waveform_generation;
 if ~exist('target_range', 'var')
     target_range = 50;
 end
-target_velocity = 10; % Positive is defined moving away from the radar
+if ~exist('target_velocity', 'var')
+    target_velocity = 10; % Positive is defined moving away from the radar
+end
 
 %% Step 2 Time Delay
 delay = 2 * (target_range + target_velocity * t) / c;
@@ -22,7 +24,3 @@ Rx = exp(1i * pi * S * (t - delay).^2) .* exp(-1i * 2 * pi * fc * delay);
 
 % Enforcing causality
 Rx = Rx .* (t >= delay);
-
-%% Step 4 Noise Simulation
-noise_factor = 0.01;
-Rx_noise = Rx + noise_factor * (randn + 1i * randn);

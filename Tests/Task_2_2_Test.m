@@ -36,7 +36,7 @@ classdef Task_2_2_Test < matlab.unittest.TestCase
             % frequency (beat frequency) is proportional to the range.
             % f_beat = S * t_max. Hence, a horizontal yellow line should be
             % observed.
-            % spectrogram(Mx, 128, 120, 128, fs, 'yaxis');
+            spectrogram(Mx, 128, 120, 128, fs, 'yaxis');
         end
     end
 end
