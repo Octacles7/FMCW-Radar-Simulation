@@ -63,3 +63,7 @@
 - Improved extensiveness of test cases throughout tasks
 - Improved code quality across the codebase
 - Official technical implementation completion
+
+## Final Report
+### Jan 18
+- Official project completion

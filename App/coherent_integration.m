@@ -12,8 +12,8 @@ N = 2^7; % Velocity resolution
 %% Step 2 Simulation Loop
 Mx_matrix = zeros(N, length(t));
 
-target_range_original = 120;
-target_velocity = -40;
+target_range_original = 50;
+target_velocity = 10;
 for i = 1:N
     current_time = (i - 1) * T_chirp;
     target_range = target_range_original + target_velocity * current_time;

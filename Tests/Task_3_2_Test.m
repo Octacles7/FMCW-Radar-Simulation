@@ -121,6 +121,7 @@ classdef Task_3_2_Test < matlab.unittest.TestCase
 
         function testSurfPlot(testCase)
             % Should expect a peak at the target range and velocity
+            target_SNR_dB = -10;
             two_dimensional_fft;
             figure('Name', 'Range-Velocity Map');
 
@@ -130,7 +131,7 @@ classdef Task_3_2_Test < matlab.unittest.TestCase
             axis tight;
             grid on;
             view([0 90]);
-            title('Range-Velocity Map');
+            title('Range-Doppler Map');
             xlabel('Range (m)');
             ylabel('Velocity (m/s)');
             zlabel('Amplitude (dB)');

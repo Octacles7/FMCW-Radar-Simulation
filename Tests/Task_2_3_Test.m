@@ -62,6 +62,7 @@ classdef Task_2_3_Test < matlab.unittest.TestCase
             plot(frequency, abs(y_normalised));
             grid on;
             title("Magnitude plot of FFT");
+            xlabel("Frequency (Hz)");
             ylabel("Magnitude");
 
             subplot 212;

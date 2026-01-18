@@ -14,6 +14,7 @@ classdef Task_3_3_Test < matlab.unittest.TestCase
     
     methods (Test)
         function testDetectionMap(testCase)
+            target_SNR_dB = -10;
             cfar_detection;
             
             % Purpose: Visualize the binary detection map and extract coordinates.
